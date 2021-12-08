@@ -63,13 +63,14 @@ public class Customer {
 	/*
 	 * returnBook - returns a book back to the library
 	 */
-	public void returnBook(Book book) {
-		book.returnBook();
+	public void returnBook(Book book) {	
 		if (book.isOverDue()) {
 			overdueBooks.remove(book.getISBN());
 		} else {
 			nonOverdueBooks.remove(book.getISBN());
 		}
+
+		book.returnBook();
 	}
 	
 	/*
@@ -102,6 +103,23 @@ public class Customer {
 		for (Book book : nonOverdueBooks.values()) {
 			book.isOverDue();
 		}
+	}
+
+	public void printBooks() {
+		for (Book book : nonOverdueBooks.values()) {
+			System.out.println(book.toString());
+		}
+		for (Book book :overdueBooks.values()) {
+			System.out.println(book.toString());
+		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getID() {
+		return ID;
 	}
 
 

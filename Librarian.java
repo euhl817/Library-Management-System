@@ -47,6 +47,14 @@ public class Librarian {
 		return false;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public int getID() {
+		return eId;
+	}
+
 	
 
 }

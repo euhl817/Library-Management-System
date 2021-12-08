@@ -82,5 +82,9 @@ public class Book {
 	public String getISBN() {
 		return ISBN;
 	}
+
+	public String toString() {
+		return title;
+	}
     
 }
