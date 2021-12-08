@@ -9,7 +9,6 @@ public class Customer {
 	private int ID;										//Customer ID
 	private HashMap<String, Book> nonOverdueBooks;		//list of books that are not overdue
 	private HashMap<String, Book> overdueBooks;			//list of books that are overdue
-	private int numCheckedout;							//number of books checked out
 	private LibrarySystem LibrarySystem;				
 	private String phoneNumber;							//Customer phone number
 	private String emailAddress;						//Customer email address
@@ -24,7 +23,6 @@ public class Customer {
 		this.LibrarySystem = null;
 		this.nonOverdueBooks = new HashMap<>();
 		this.overdueBooks = new HashMap<>();
-		this.numCheckedout = nonOverdueBooks.size() + overdueBooks.size();
 		this.phoneNumber = phoneNumber;
 		this.emailAddress = emailAddress;
 
@@ -35,7 +33,7 @@ public class Customer {
 	 * getNumCheckedOut - returns the number of checked out books
 	 */
 	public int getNumCheckedOut() {
-		return numCheckedout;
+		return nonOverdueBooks.size() + overdueBooks.size();
 	}
 
 	/*
