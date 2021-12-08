@@ -113,27 +113,7 @@ public class LibrarySystem {
     }
 
     public static void main(String[] args) {
-        LibrarySystem library = new LibrarySystem(10, 14);
-        Administrator admin = new Administrator("Eugene", "1");
-        library.addAdministrator(admin);
-        admin.addLibrarian("Andrew");
-        admin.addCustomer("June", "8083923815", "june@bu.edu");
-        admin.addBook("Harry Potter", "J.K Rowling", "0001");
-        admin.addBook("1984", "George Orwell", "0002");
-        admin.addBook("Pride and Prejudice", "Jane Austen", "0003");
-
-        
-
-        Librarian andrew = library.getLibrarian(0);
-        Customer june = library.getCustomer(0);
-
-        andrew.checkOutBook("0001", 0);
-        andrew.checkOutBook("0002", 0);
-        
-        andrew.returnBook("0001", 0);
-
-        june.printBooks();
-        
+        //Copy test case text here
 
     }
 
